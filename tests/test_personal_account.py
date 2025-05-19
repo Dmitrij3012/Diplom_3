@@ -8,7 +8,6 @@ from pages.personal_account_page import PersonalAccountPage
 class TestPersonalAccount:
 
     @allure.title('Переход по клику на "Личный кабинет"')
-    @allure.step('Проверка перехода по клику на кнопку "Личный кабинет"')
     def test_click_on_personal_account_button(self, driver, create_user):
 
         main_page = MainPage(driver)
@@ -27,7 +26,6 @@ class TestPersonalAccount:
             assert personal_page._get_url() == url.PERSONAL_ACCOUNT_URL
 
     @allure.title('Переход перехода в раздел "История заказов"')
-    @allure.step('Проверка перехода по клику на кнопку "История заказов"')
     def test_go_to_the_order_history_section(self, driver, create_user):
 
         main_page = MainPage(driver)
@@ -46,7 +44,6 @@ class TestPersonalAccount:
             assert personal_page._get_url() == url.ORDER_HISTORY_URL
 
     @allure.title('Выход из аккаунта')
-    @allure.step('Проверка выхода из аккаунта по клику на кнопку "Выход"')
     def test_logout(self, driver, create_user):
 
         main_page = MainPage(driver)

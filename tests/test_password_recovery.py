@@ -9,7 +9,6 @@ from pages.main_page import MainPage
 class TestPasswordRecovery:
 
     @allure.title('Переход на страницу восстановления пароля')
-    @allure.step('Проверка перехода по кнопке "Восстановить пароль"')
     def test_go_to_the_password_recovery_page(self, driver):
 
         main_page = MainPage(driver)
@@ -23,7 +22,6 @@ class TestPasswordRecovery:
             assert login_page._get_url() == url.FORGOT_PASSWORD_URL
 
     @allure.title('Ввод почты и клик по кнопке "Восстановить"')
-    @allure.step('Проверка ввода почты и клика по кнопке "Восстановить"')
     def test_enter_email_and_click_on_the_restore_button(self, driver):
 
         name, email, password = fake_data()
@@ -42,7 +40,6 @@ class TestPasswordRecovery:
             assert login_page._get_url() == url.RESET_PASSWORD_URL
 
     @allure.title('Видимость поля "Пароль"')
-    @allure.step("Проверка видимости пароля по клику кнопки скрыть/показать пароль")
     def test_go_to_password_recovery_page(self, driver):
 
         name, email, password = fake_data()

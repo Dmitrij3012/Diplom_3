@@ -8,21 +8,6 @@ class MainPageLocators:
         "//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div"
     )
 
-    # OVERLAY = (
-    #     By.XPATH,
-    #     "//div[contains(@class, 'Modal_modal__P3_V5')]"
-    # )
-    #
-    # ORDER_WINDOW = (
-    #     By.XPATH,
-    #     "//section[contains(@class, 'Modal_modal_opened__3ISw4 Modal_modal__P3_V5')]"
-    # )
-
-    # ORDER_WINDOW_OVERLAY = (
-    #     By.XPATH,
-    #     "//div[contains(@class, 'Modal_modal__P3_V5')]"
-    # )
-
     PERSONAL_ACCOUNT_BUTTON = (
         By.XPATH,
         "//p[@class='AppHeader_header__linkText__3q_va ml-2' and text()='Личный Кабинет']"

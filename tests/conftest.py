@@ -17,6 +17,7 @@ def driver(request):
     yield browser
     browser.quit()
 
+
 @pytest.fixture
 def create_user():
     user_data = Data.user_body()

@@ -11,7 +11,6 @@ from pages.personal_account_page import PersonalAccountPage
 class TestOrderFeed:
 
     @allure.title('Появление всплывающего окна при клике на заказ')
-    @allure.step('Проверка появления всплывающего окна при клике на заказ')
     def test_click_on_order_open_popup(self, driver):
 
         main_page = MainPage(driver)
@@ -26,7 +25,6 @@ class TestOrderFeed:
             assert value == OrderFeedLocators.WINDOW_OPENED_VALUE
 
     @allure.title('Отображение заказов пользователя из раздела «История заказов» на странице «Лента заказов»')
-    @allure.step('Проверка отображения заказов пользователя из раздела «История заказов» на странице «Лента заказов»')
     def test_user_order_from_order_history_and_order_feed(self, driver, create_user):
 
         main_page = MainPage(driver)
@@ -63,7 +61,6 @@ class TestOrderFeed:
             assert name_in_order_history == name_in_order_feed
 
     @allure.title('Увеличение счётчика "Выполнено за всё время" при создании заказа')
-    @allure.step('Проверка увеличения счётчика "Выполнено за всё время" при создании заказа')
     def test_number_of_orders_all(self, driver, create_user):
 
         main_page = MainPage(driver)
@@ -95,7 +92,6 @@ class TestOrderFeed:
             assert int(count_after_order) > int(count_before_order)
 
     @allure.title('Увеличение счётчика "Выполнено за сегодня" при создании заказа')
-    @allure.step('Проверка увеличения счётчика "Выполнено за сегодня" при создании заказа')
     def test_number_of_orders_today(self, driver, create_user):
 
         main_page = MainPage(driver)
@@ -127,7 +123,6 @@ class TestOrderFeed:
             assert int(count_after_order) > int(count_before_order)
 
     @allure.title('Появление номера заказа в разделе "В работе" после его оформления')
-    @allure.step('Проверка появления номера заказа в разделе "В работе" после его оформления')
     def test_order_number_in_work_list(self, driver, create_user):
 
         main_page = MainPage(driver)
